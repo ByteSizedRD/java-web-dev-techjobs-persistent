@@ -24,7 +24,7 @@ public class Employer extends AbstractEntity {
     public Employer(String location) {
         super();
         this.location = location;
-        this.jobs = jobs;
+//        this.jobs = jobs;
     }
 
     public Employer() {}
