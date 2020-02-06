@@ -20,7 +20,10 @@ public class Employer extends AbstractEntity {
     public String location;
 
 
+    //Getters, Setters, and constructors
+
     public Employer(String location) {
+        super();
         this.location = location;
     }
 
@@ -32,5 +35,9 @@ public class Employer extends AbstractEntity {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public List<Job> getJobs() {
+        return jobs;
     }
 }

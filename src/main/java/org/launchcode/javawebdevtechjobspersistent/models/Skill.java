@@ -12,10 +12,11 @@ public class Skill extends AbstractEntity {
     @Size(min=3, max=500, message="Description must be between 3 and 500 characters.")
     private String description;
 
+    //Getters, Setters, Constructors
     public Skill(String description) {
-          this.description = description;
+        super();
+        this.description = description;
     }
-
     public Skill() {}
 
     public String getDescription() {
@@ -25,4 +26,5 @@ public class Skill extends AbstractEntity {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }
