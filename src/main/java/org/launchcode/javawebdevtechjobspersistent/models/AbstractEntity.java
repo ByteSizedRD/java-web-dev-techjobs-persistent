@@ -20,6 +20,8 @@ public abstract class AbstractEntity {
     @Size(min=2, max = 100)
     private String name;
 
+    //Getters, Setters, Constructors
+
     public int getId() {
         return id;
     }

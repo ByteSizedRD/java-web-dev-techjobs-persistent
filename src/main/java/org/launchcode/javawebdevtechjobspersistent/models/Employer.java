@@ -11,9 +11,8 @@ import java.util.List;
 @Entity
 public class Employer extends AbstractEntity {
 
-    @OneToMany
-    @JoinColumn
-    private final List<Job> jobs = new ArrayList<>();
+    @OneToMany(mappedBy = "employer")
+    private List<Job> jobs = new ArrayList<>();
 
     @NotBlank(message="Please provide a location")
     @Size(min=3, max=100, message="Employer can only have one location")
@@ -25,6 +24,7 @@ public class Employer extends AbstractEntity {
     public Employer(String location) {
         super();
         this.location = location;
+        this.jobs = jobs;
     }
 
     public Employer() {}
@@ -39,5 +39,9 @@ public class Employer extends AbstractEntity {
 
     public List<Job> getJobs() {
         return jobs;
+    }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
     }
 }
